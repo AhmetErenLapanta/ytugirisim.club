@@ -1,18 +1,6 @@
 import { useState } from "react";
 
 const Nav = () => {
-    // const showMenu = (toggleId, navId) => {
-    //     const toggle = document.getElementById(toggleId),
-    //         nav = document.getElementById(navId);
-
-    //     if (toggle && nav) {
-    //         toggle.addEventListener("click", () => {
-    //             nav.classList.toggle("show");
-    //         });
-    //     }
-    // };
-    // showMenu("nav-toggle", "nav-menu");
-
     const [showMenu, setShowMenu] = useState(false);
 
     return (

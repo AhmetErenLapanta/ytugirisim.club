@@ -4,13 +4,9 @@
 :root {
     --header-height: 3rem;
     --font-semi: 600;
-    /*===== Colores =====*/
-    /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-    /* HSL color mode */
     --hue-color: 335;
     --first-color: #ef4136;
     --second-color: rgb(95, 95, 95);
-    /*===== Fuente y tipografia =====*/
     --body-font: "Poppins", sans-serif;
     --big-font-size: 2rem;
     --h2-font-size: 1.25rem;
@@ -429,8 +425,14 @@ img {
         row-gap: 2rem;
         padding: 3rem 0 5rem;
     }
+    body {
+        margin-top: 4rem;
+    }
 }
 @media screen and (min-width: 576px) {
+    body {
+        margin-top: 4rem;
+    }
     .home {
         padding: 4rem 0 2rem;
     }
@@ -489,6 +491,7 @@ img {
 @media screen and (min-width: 768px) {
     body {
         margin: 0;
+        margin-top: 6rem;
     }
     .section {
         padding-top: 4rem;
@@ -555,6 +558,9 @@ img {
     .home__img {
         width: 380px;
         bottom: 1px;
+    }
+    body {
+        margin-top: 0.5rem;
     }
 }
 
@@ -636,3 +642,74 @@ img {
 }
 
 /* typing dem */
+
+/* MEMBER CARDS */
+
+.featured__container {
+    row-gap: 2rem;
+}
+
+.featured__card {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1rem;
+    overflow-y: hidden;
+    transition: 0.3s;
+}
+
+.featured__tag {
+    background-color: var(--first-color);
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.813rem;
+    font-weight: 600;
+    margin: 0 auto;
+    top: 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.featured__img {
+    height: 214px;
+    margin-bottom: 1rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.featured__title,
+.featured__department {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.featured__title {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.featured__department {
+    display: block;
+    color: var(--first-color);
+    transition: 0.3s;
+}
+
+.featured__button {
+    transform: translateY(1rem);
+    opacity: 0;
+}
+
+.featured__card:hover {
+    box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+    padding: 2rem 0 3rem 0;
+}
+
+.featured__card:hover .featured__button {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.featured__card:hover .featured__tag {
+    border-radius: 0.5rem;
+}

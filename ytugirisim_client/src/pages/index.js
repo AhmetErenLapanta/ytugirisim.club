@@ -1,5 +1,3 @@
-import styles from "@/styles/Home.module.css";
-import Nav from "@/sections/Nav.jsx";
 import Layout from "@/hoc/Layout.jsx";
 import Departments from "@/sections/Departments";
 import Hero from "@/sections/Hero";
@@ -7,6 +5,7 @@ import About from "@/sections/About";
 import Events from "@/sections/Events";
 import WordCard from "@/components/WordCard";
 import ContactForm from "@/components/ContactForm";
+import { Members } from "@/sections/Members";
 export default function Home() {
     return (
         <Layout>
@@ -22,7 +21,7 @@ export default function Home() {
             <WordCard content="Enerjik" />
             <WordCard content="Dinamik" />
             <WordCard content="Eğlenceli" />
-
+            <Members />
             <Departments className="work__container" />
             <ContactForm className="section bd-grid" id="contact" />
             {/*===== CONTACT =====*/}
