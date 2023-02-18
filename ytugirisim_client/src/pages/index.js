@@ -6,17 +6,17 @@ import Events from "@/sections/Events";
 import WordCard from "@/components/WordCard";
 import ContactForm from "@/components/ContactForm";
 import { Members } from "@/sections/Members";
+import BlogCards from "@/sections/BlogCards";
+
 export default function Home() {
     return (
         <Layout>
             <Hero />
-            {/*===== ABOUT =====*/}
             <About />
-            {/*===== SKILLS =====*/}
             <h2 className="section skills__container skills__subtitle">
                 Fikrini Geliştir, Dünyayı Değiştir!
             </h2>
-
+            <BlogCards />
             <Events />
             <WordCard content="Enerjik" />
             <WordCard content="Dinamik" />

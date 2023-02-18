@@ -2,21 +2,23 @@ import React from "react";
 
 export const MemberCard = () => {
     return (
-        <article class="featured__card">
-            <span class="featured__tag">Technical Team Leader</span>
+        <article className="featured__card">
+            <span className="featured__tag">Technical Team Leader</span>
 
             <img
                 src="/_removal.ai__tmp-63d113e611248_MQH2EH-removebg-preview.png"
                 alt=""
-                class="featured__img"
+                className="featured__img"
             />
 
-            <div class="featured__data">
-                <h3 class="featured__title">Ahmet Eren Lapanta</h3>
-                <span class="featured__department">Matematik Mühendisliği</span>
+            <div className="featured__data">
+                <h3 className="featured__title">Ahmet Eren Lapanta</h3>
+                <span className="featured__department">
+                    Matematik Mühendisliği
+                </span>
             </div>
 
-            <div class="featured__button">
+            <div className="featured__button">
                 <a
                     href="https://www.linkedin.com/company/ytugirisim/"
                     className="home__social-icon"

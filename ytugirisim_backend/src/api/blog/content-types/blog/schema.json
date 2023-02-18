@@ -38,9 +38,8 @@
       "target": "api::review.review",
       "mappedBy": "blog"
     },
-    "Blog_Slug": {
-      "type": "uid",
-      "targetField": "Blog_Title"
+    "slug": {
+      "type": "string"
     }
   }
 }

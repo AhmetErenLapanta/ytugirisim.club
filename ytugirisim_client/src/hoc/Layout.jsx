@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Nav from "../sections/Nav";
 import Footer from "../sections/Footer";
+import Script from "next/script";
+import Link from "next/link";
 
 const Layout = ({ children }) => {
     return (
@@ -15,21 +17,21 @@ const Layout = ({ children }) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="icon" href="/favicon.ico" />
+                <Link rel="icon" href="/favicon.ico" />
                 {/* box icons */}
-                <link
+                <Link
                     href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
                     rel="stylesheet"
                 />
-                <script
+                <Script
                     type="module"
                     src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
-                ></script>
-                <script
+                ></Script>
+                <Script
                     nomodule=""
                     src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
-                ></script>
-                <link
+                ></Script>
+                <Link
                     href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
                     rel="stylesheet"
                 />

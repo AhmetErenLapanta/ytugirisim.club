@@ -6,12 +6,9 @@ const Nav = () => {
     return (
         <header className="l-header">
             <nav className="nav bd-grid">
-                <img
-                    src="/perfil.png"
-                    href="#home"
-                    className="nav__logo"
-                    alt=""
-                />
+                <a href="/">
+                    <img src="/perfil.png" className="nav__logo" alt="" />
+                </a>
                 <div
                     className={showMenu ? "nav__menu show" : "nav__menu"}
                     id="nav-menu"

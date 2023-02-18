@@ -328,7 +328,8 @@ img {
 }
 
 /* ===== WORK =====*/
-.work__container {
+.work__container,
+.blog__container {
     row-gap: 2rem;
 }
 
@@ -347,12 +348,15 @@ img {
     transform: scale(1.1);
 }
 
-.work__container div {
+.work__container div,
+.blog__container div {
     margin-bottom: 3rem;
     justify-content: center;
     align-items: center;
 }
-.work__container h2 {
+
+.work__container h2,
+.blog__container h2 {
     margin: 3px 1% 3px 3%;
 }
 
@@ -465,6 +469,11 @@ img {
         column-gap: 2rem;
         padding: 2rem 0;
     }
+    .blog__container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        padding: 2rem 0;
+    }
     .contact__form {
         width: 540px;
         padding: 2.5rem 0;
@@ -544,6 +553,11 @@ img {
     .work__container {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
+    }
+    .blog__container {
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 2rem;
+        padding: 2rem 0;
     }
 }
 
