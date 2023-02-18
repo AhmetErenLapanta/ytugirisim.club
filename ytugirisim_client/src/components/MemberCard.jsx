@@ -1,6 +1,6 @@
 import React from "react";
 
-export const MemberCard = () => {
+export const MemberCard = ({ content }) => {
     return (
         <article className="featured__card">
             <span className="featured__tag">Technical Team Leader</span>

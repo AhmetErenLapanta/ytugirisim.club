@@ -555,7 +555,7 @@ img {
         column-gap: 2rem;
     }
     .blog__container {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
         padding: 2rem 0;
     }

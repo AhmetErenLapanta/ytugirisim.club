@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Full_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Position": {
+      "type": "string",
+      "required": true
+    },
+    "Department": {
+      "type": "string",
+      "required": true
+    },
+    "Profile_Picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "LinkedIn_Link": {
+      "type": "string"
+    },
+    "Instagram_Link": {
+      "type": "string"
+    },
+    "Twitter_Link": {
+      "type": "string"
+    }
+  }
+}

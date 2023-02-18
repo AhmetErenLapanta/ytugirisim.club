@@ -5,7 +5,7 @@ import About from "@/sections/About";
 import Events from "@/sections/Events";
 import WordCard from "@/components/WordCard";
 import ContactForm from "@/components/ContactForm";
-import { Members } from "@/sections/Members";
+import Members from "@/sections/Members";
 import BlogCards from "@/sections/BlogCards";
 
 export default function Home() {

@@ -4,7 +4,6 @@ import { fetcher } from "lib/api";
 import Markdown from "@/hoc/Markdown";
 
 const Blog = ({ blog, jwt, error }) => {
-    console.log(blog);
     return (
         <Layout>
             <Markdown className="section-title">{blog.Blog_Title}</Markdown>
@@ -41,7 +40,7 @@ export async function getServerSideProps({ req, params }) {
         };
     } else {
         return {
-            props: { error: "errror" /* blogResponse.error.message */ },
+            props: { error: blogResponse.error.message },
         };
     }
 }

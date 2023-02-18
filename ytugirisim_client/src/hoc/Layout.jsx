@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Nav from "../sections/Nav";
 import Footer from "../sections/Footer";
-import Script from "next/script";
-import Link from "next/link";
 
 const Layout = ({ children }) => {
     return (
