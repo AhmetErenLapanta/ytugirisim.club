@@ -567,14 +567,14 @@ img {
         margin-right: auto;
     }
     .home {
-        padding: 10rem 0 2rem;
+        padding: 4rem 2rem;
     }
     .home__img {
         width: 380px;
         bottom: 1px;
     }
     body {
-        margin-top: 0.5rem;
+        margin-top: 8rem;
     }
 }
 

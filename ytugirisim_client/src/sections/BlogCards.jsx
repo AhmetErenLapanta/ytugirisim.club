@@ -20,12 +20,15 @@ const BlogCards = () => {
     }, []);
 
     return (
-        <section className="blog__container bd-grid">
-            {idList.map((id) => {
-                const blogContent = content[id - 1]?.attributes;
-                return <BlogCard key={id} id={id} content={blogContent} />;
-            })}
-        </section>
+        <>
+            <h2 className="section-title">Son Bloglarımız!</h2>
+            <section className="blog__container bd-grid">
+                {idList.map((id) => {
+                    const blogContent = content[id - 1]?.attributes;
+                    return <BlogCard key={id} id={id} content={blogContent} />;
+                })}
+            </section>
+        </>
     );
 };
 

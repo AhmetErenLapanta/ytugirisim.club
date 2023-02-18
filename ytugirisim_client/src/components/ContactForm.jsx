@@ -30,7 +30,6 @@ const ContactForm = () => {
                     />
                     <textarea
                         name="message"
-                        id
                         cols={0}
                         rows={10}
                         className="contact__input"

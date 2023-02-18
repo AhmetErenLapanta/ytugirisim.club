@@ -1,11 +1,14 @@
 import Layout from "@/hoc/Layout";
 import React from "react";
 import { fetcher } from "lib/api";
+import Markdown from "@/hoc/Markdown";
+
 const Blog = ({ blog, jwt, error }) => {
+    console.log(blog);
     return (
         <Layout>
-            <h1>{blog.Blog_Title}</h1>
-            <p>{blog.Blog_Content}</p>
+            <Markdown className="section-title">{blog.Blog_Title}</Markdown>
+            <Markdown className="bd-grid section">{blog.Blog_Content}</Markdown>
         </Layout>
     );
 };

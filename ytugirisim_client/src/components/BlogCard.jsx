@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const BlogCard = ({ key, id, content }) => {
+const BlogCard = ({ content }) => {
     return (
         <Link href={"/blogs/" + content.slug}>
             <article className="featured__card">

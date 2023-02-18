@@ -17,21 +17,21 @@ const Layout = ({ children }) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <Link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.ico" />
                 {/* box icons */}
-                <Link
+                <link
                     href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
                     rel="stylesheet"
                 />
-                <Script
+                <script
                     type="module"
                     src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
-                ></Script>
-                <Script
+                ></script>
+                <script
                     nomodule=""
                     src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
-                ></Script>
-                <Link
+                ></script>
+                <link
                     href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
                     rel="stylesheet"
                 />
