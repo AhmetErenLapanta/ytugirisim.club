@@ -32,13 +32,19 @@ const index = ({ error, members }) => {
 
                         <div className="featured__button">
                             <a
-                                href={member.attributes.LinkedIn_Link}
+                                href={
+                                    member.attributes.LinkedIn_Link ??
+                                    "https://www.linkedin.com/company/ytugirisim/"
+                                }
                                 className="home__social-icon"
                             >
                                 <i className="bx bxl-linkedin" />
                             </a>
                             <a
-                                href={member.attributes.Instagram_Link}
+                                href={
+                                    member.attributes.Instagram_Link ??
+                                    "https://www.instagram.com/ytugirisim/"
+                                }
                                 className="home__social-icon"
                             >
                                 <i className="bx bxl-instagram" />

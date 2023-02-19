@@ -424,6 +424,10 @@ img {
     }
 }
 
+.featured__button {
+    margin-top: 2rem;
+}
+
 @media screen and (max-width: 576px) {
     .home {
         row-gap: 2rem;
@@ -431,6 +435,10 @@ img {
     }
     body {
         margin-top: 4rem;
+    }
+    .home__social-icon:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
     }
 }
 @media screen and (min-width: 576px) {
@@ -446,7 +454,7 @@ img {
         flex-direction: row;
         align-self: flex-end;
     }
-    .home__social-icon {
+    .home__social-icon:not(:last-child) {
         margin-bottom: 0;
         margin-right: var(--mb-4);
     }

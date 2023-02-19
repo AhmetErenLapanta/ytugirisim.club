@@ -40,6 +40,11 @@
     },
     "slug": {
       "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
     }
   }
 }

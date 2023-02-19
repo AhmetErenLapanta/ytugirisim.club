@@ -8,7 +8,7 @@ const BlogCards = () => {
     useEffect(() => {
         const fetchData = async () => {
             const blogResponse = await fetch(
-                `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`
+                `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`
             );
             const data = await blogResponse.json();
 
