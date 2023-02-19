@@ -10,8 +10,8 @@ const BlogCard = ({ content }) => {
                     {content.Blog_Releasing_Date}
                 </span>
 
-                <div className="featured__data">
-                    {content.author.data ? (
+                <div>
+                    {content.author ? (
                         <h3
                             className="featured__title"
                             style={{ color: "var(--second-color)" }}
@@ -36,15 +36,15 @@ const BlogCard = ({ content }) => {
                         className="featured__button"
                         style={{ marginBottom: 0, marginTop: "2rem" }}
                     >
-                        <a
+                        <div
                             className="home__social-icon"
-                            style={{ marginRight: 0 }}
+                            style={{ margin: "0 auto" }}
                         >
                             <i
-                                class="bx bx-book-reader bx-flashing"
+                                className="bx bx-book-reader bx-flashing"
                                 style={{ fontSize: "3rem" }}
                             ></i>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </article>

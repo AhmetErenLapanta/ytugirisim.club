@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MemberCard from "@/components/MemberCard";
-
+import Link from "next/link";
 const Members = () => {
     const [members, setMembers] = useState([]);
 
@@ -22,10 +22,16 @@ const Members = () => {
         fetchData();
     }, []);
     return (
-        <div className="work__container bd-grid">
-            {members?.map((member) => (
-                <MemberCard content={member.attributes} />
-            ))}
+        <div className="section">
+            <h2 className="section-title">Ekip</h2>
+            <div className="work__container bd-grid">
+                {members?.map((member) => (
+                    <MemberCard content={member.attributes} />
+                ))}
+            </div>
+            <Link href="/members" type="">
+                <button className="button2">Tüm Ekip!</button>
+            </Link>
         </div>
     );
 };

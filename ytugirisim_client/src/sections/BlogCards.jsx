@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "@/components/BlogCard";
+import Link from "next/link";
 
 const BlogCards = () => {
     const [idList, setIdList] = useState([]);
@@ -20,15 +21,18 @@ const BlogCards = () => {
     }, []);
 
     return (
-        <>
-            <h2 className="section-title">Son Bloglarımız!</h2>
+        <div className="section">
+            <h2 className="section-title">Son Bloglarımız</h2>
             <section className="blog__container bd-grid">
                 {idList.map((id) => {
                     const blogContent = content[id - 1]?.attributes;
                     return <BlogCard key={id} id={id} content={blogContent} />;
                 })}
             </section>
-        </>
+            <Link href="/blogs" type="">
+                <button className="button2">Tüm Bloglar!</button>
+            </Link>
+        </div>
     );
 };
 

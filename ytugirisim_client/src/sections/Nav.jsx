@@ -13,9 +13,12 @@ const Nav = () => {
                     className={showMenu ? "nav__menu show" : "nav__menu"}
                     id="nav-menu"
                 >
-                    <ul className="nav__list">
+                    <ul
+                        className="nav__list"
+                        onClick={() => setShowMenu(!showMenu)}
+                    >
                         <li className="nav__item">
-                            <a href="#home" className="nav__link active">
+                            <a href="/" className="nav__link active">
                                 Home
                             </a>
                         </li>
@@ -25,17 +28,23 @@ const Nav = () => {
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#work" className="nav__link">
+                            <a href="/blogs" className="nav__link">
+                                Bloglar
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a href="/#work" className="nav__link">
                                 Etkinlikler
                             </a>
                         </li>
                         <li className="nav__item">
-                            <a href="#deps" className="nav__link">
-                                Departmanlar
+                            <a href="/members" className="nav__link">
+                                Ekip
                             </a>
                         </li>
+
                         <li className="nav__item">
-                            <a href="#contact" className="nav__link">
+                            <a href="/#contact" className="nav__link">
                                 Form
                             </a>
                         </li>

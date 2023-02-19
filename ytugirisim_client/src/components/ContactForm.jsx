@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
     return (
-        <div className="bd-grid">
+        <div className="bd-grid" id="contact">
             <h2 className="section-title">İletişime Geç!</h2>
             <div className="contact__container bd-grid">
                 <form
@@ -36,7 +36,7 @@ const ContactForm = () => {
                         placeholder="Açıklama"
                         defaultValue={""}
                     />
-                    <button type="submit" className="contact__button button">
+                    <button type="submit" className="button2">
                         Gönder
                     </button>
                 </form>

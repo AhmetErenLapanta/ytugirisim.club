@@ -5,13 +5,17 @@ import BlogCard from "@/components/BlogCard";
 const Blogs = ({ blogs }) => {
     return (
         <Layout>
-            {blogs.data.map((blog) => (
-                <BlogCard
-                    key={blog.id}
-                    id={blog.id}
-                    content={blog.attributes}
-                />
-            ))}
+            <h2 className="section-title ">Tüm Bloglar!</h2>
+            <img src="/Blogging-pana.svg" className="page_hero"></img>
+            <section className="blog__container bd-grid">
+                {blogs.data.map((blog) => (
+                    <BlogCard
+                        key={blog.id}
+                        id={blog.id}
+                        content={blog.attributes}
+                    />
+                ))}
+            </section>
         </Layout>
     );
 };

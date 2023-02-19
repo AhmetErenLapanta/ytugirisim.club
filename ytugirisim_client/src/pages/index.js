@@ -13,15 +13,12 @@ export default function Home() {
         <Layout>
             <Hero />
             <About />
-            <h2 className="section skills__container skills__subtitle">
-                Fikrini Geliştir, Dünyayı Değiştir!
-            </h2>
             <BlogCards />
+            <WordCard content="Enerjik" className="section" />
             <Events />
-            <WordCard content="Enerjik" />
-            <WordCard content="Dinamik" />
-            <WordCard content="Eğlenceli" />
+            <WordCard content="Dinamik" className="section" />
             <Members />
+            <WordCard content="Eğlenceli" className="section" />
             <Departments className="work__container" />
             <ContactForm className="section bd-grid" id="contact" />
             {/*===== CONTACT =====*/}
