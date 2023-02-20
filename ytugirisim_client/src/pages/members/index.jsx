@@ -1,11 +1,20 @@
 import Layout from "@/hoc/Layout";
 import React from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const index = ({ error, members }) => {
     const content = members.data;
 
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
     return (
         <Layout>
+            <motion.div className="progress-bar" style={{ scaleX }} />
+
             <div className="section">
                 <h2 className="section-title ">Ekibimiz!</h2>
 

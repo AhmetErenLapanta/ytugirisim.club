@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
             <p className="footer__copy">
                 ©ytugirisim.club. All Rights Reserved. <br />
-                Developed by
+                Developed by&nbsp;
                 <a href="https://www.linkedin.com/in/ahmet-eren-lapanta/">
                     Technical Team Leader of the Club
                 </a>

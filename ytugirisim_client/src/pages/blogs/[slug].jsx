@@ -3,12 +3,22 @@ import React from "react";
 import { fetcher } from "lib/api";
 import Markdown from "@/hoc/Markdown";
 import MemberCard from "@/components/MemberCard";
+import { motion, useScroll, useSpring } from "framer-motion";
 
-const Blog = ({ blog, jwt, error }) => {
+const Blog = ({ blog, error }) => {
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
     return (
         <Layout>
+            <motion.div className="progress-bar" style={{ scaleX }} />
             <Markdown className="section-title">{blog.Blog_Title}</Markdown>
-            <Markdown className="bd-grid section">{blog.Blog_Content}</Markdown>
+            <Markdown className="bd-grid section blog_content">
+                {blog.Blog_Content}
+            </Markdown>
             {blog.author.data ? (
                 <>
                     <Markdown className="section-title">Yazar</Markdown>
@@ -30,7 +40,7 @@ export async function getServerSideProps({ req, params }) {
     if (blogResponse) {
         return {
             props: {
-                blog: blogResponse.data.attributes /*,  jwt: jwt ? jwt : ""  */,
+                blog: blogResponse.data.attributes,
             },
         };
     } else {
