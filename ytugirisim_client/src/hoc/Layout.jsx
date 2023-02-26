@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/nlogo.png" />
                 {/* box icons */}
                 <link
                     href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"

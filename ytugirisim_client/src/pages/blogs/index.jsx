@@ -10,6 +10,7 @@ const Blogs = ({ blogs }) => {
         damping: 30,
         restDelta: 0.001,
     });
+
     return (
         <Layout>
             <motion.div className="progress-bar" style={{ scaleX }} />
@@ -30,7 +31,9 @@ const Blogs = ({ blogs }) => {
 };
 
 export async function getServerSideProps() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`);
+    const response = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`
+    );
 
     const data = await response.json();
 

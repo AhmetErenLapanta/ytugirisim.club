@@ -29,11 +29,13 @@ const Footer = () => {
                 </a>
             </div>
             <p className="footer__copy">
-                ©ytugirisim.club. All Rights Reserved. <br />
                 Developed by&nbsp;
                 <a href="https://www.linkedin.com/in/ahmet-eren-lapanta/">
                     Technical Team Leader of the Club
-                </a>
+                </a>{" "}
+                <br />
+                <br />
+                ©ytugirisim.club. All Rights Reserved.
             </p>
         </footer>
     );

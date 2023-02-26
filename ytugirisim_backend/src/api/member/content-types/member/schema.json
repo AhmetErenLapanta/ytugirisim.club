@@ -24,14 +24,6 @@
       "type": "string",
       "required": true
     },
-    "Profile_Picture": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
     "LinkedIn_Link": {
       "type": "string"
     },
@@ -40,6 +32,11 @@
     },
     "Twitter_Link": {
       "type": "string"
+    },
+    "Profile_Picture": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::media.media"
     }
   }
 }

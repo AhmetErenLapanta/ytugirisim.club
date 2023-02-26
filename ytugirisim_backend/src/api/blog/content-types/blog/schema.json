@@ -23,15 +23,6 @@
     "Blog_Content": {
       "type": "richtext"
     },
-    "Blog_Image_Single": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ]
-    },
     "reviews": {
       "type": "relation",
       "relation": "oneToMany",

@@ -91,9 +91,6 @@ export default function Home({
             <section className="about section" id="about">
                 <h2 className="section-title">Hakkımızda</h2>
                 <div className="about__container bd-grid">
-                    <div className="about__img hidden">
-                        <img src="/about.jpg" alt="" />
-                    </div>
                     <div>
                         <h2 className="about__subtitle">{headerText}</h2>
                         <p className="about__text">{aboutText}</p>

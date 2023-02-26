@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 
 const BlogCard = ({ content }) => {
-    console.log(content);
     return (
         <Link href={"/blogs/" + content.slug}>
             <article className="featured__card">
@@ -11,7 +10,7 @@ const BlogCard = ({ content }) => {
                 </span>
 
                 <div>
-                    {content.author ? (
+                    {content.author?.data ? (
                         <h3
                             className="featured__title"
                             style={{ color: "var(--second-color)" }}

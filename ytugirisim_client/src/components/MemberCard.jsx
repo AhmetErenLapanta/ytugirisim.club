@@ -1,12 +1,12 @@
 import React from "react";
 
-export const MemberCard = ({ content }) => {
+export const MemberCard = ({ content, picPath }) => {
     return (
         <article className="featured__card">
             <span className="featured__tag">{content.Position}</span>
 
             <img
-                src="/_removal.ai__tmp-63d113e611248_MQH2EH-removebg-preview.png"
+                src={process.env.NEXT_PUBLIC_BASE_URL + `${picPath}`}
                 alt=""
                 className="featured__img"
             />
