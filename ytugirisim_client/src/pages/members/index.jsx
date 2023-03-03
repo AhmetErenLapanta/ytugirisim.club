@@ -4,9 +4,8 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect } from "react";
 const index = ({ error, members }) => {
     const [imgLink, setImgLink] = useState();
-    const content = members.data;
-
     const { scrollYProgress } = useScroll();
+
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
@@ -18,6 +17,7 @@ const index = ({ error, members }) => {
             const mediaResponse = await fetch(
                 `${process.env.NEXT_PUBLIC_STRAPI_URL}/medias?populate=*`
             );
+
             const mediaData = await mediaResponse.json();
 
             setImgLink(mediaData.data);
@@ -38,14 +38,20 @@ const index = ({ error, members }) => {
                     src="/starting-a-business-proyect-animate.svg"
                 />
                 <div className="work__container bd-grid">
-                    {content.map((member) => {
-                        let pictureId =
+                    {members.map((member) => {
+                        // Get the ID of the profile picture for the member
+                        const pictureId =
                             member.attributes.Profile_Picture.data.id;
-                        let theOne = imgLink?.find(
+
+                        // Find the media object with the same ID as the profile picture (using optional chaining to avoid errors)
+                        const mediaObject = imgLink?.find(
                             (obj) => obj.id === pictureId
                         );
-                        let picPath =
-                            theOne?.attributes.media_field.data.attributes.url;
+
+                        // If the media object exists, get the URL property
+                        const picPath =
+                            mediaObject?.attributes.media_field.data.attributes
+                                .url;
 
                         return (
                             <article
@@ -77,6 +83,8 @@ const index = ({ error, members }) => {
 
                                 <div className="featured__button">
                                     <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         href={
                                             member.attributes.LinkedIn_Link ??
                                             "https://www.linkedin.com/company/ytugirisim/"
@@ -86,6 +94,8 @@ const index = ({ error, members }) => {
                                         <i className="bx bxl-linkedin" />
                                     </a>
                                     <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         href={
                                             member.attributes.Instagram_Link ??
                                             "https://www.instagram.com/ytugirisim/"
@@ -95,6 +105,8 @@ const index = ({ error, members }) => {
                                         <i className="bx bxl-instagram" />
                                     </a>
                                     <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         href={
                                             member.attributes.Twitter_Link ??
                                             "https://twitter.com/ytugirisim"
@@ -117,12 +129,13 @@ export async function getServerSideProps() {
     const memberResponse = await fetch(
         `${process.env.NEXT_PUBLIC_STRAPI_URL}/members?populate=*`
     );
+
     const data = await memberResponse.json();
 
     if (data) {
         return {
             props: {
-                members: data,
+                members: data.data,
             },
         };
     } else {

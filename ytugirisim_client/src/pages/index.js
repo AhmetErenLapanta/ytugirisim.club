@@ -7,13 +7,7 @@ import Members from "@/sections/Members";
 import BlogCards from "@/sections/BlogCards";
 import { motion, useScroll, useSpring } from "framer-motion";
 
-export default function Home({
-    aboutText,
-    headerText,
-    university,
-    club,
-    website,
-}) {
+export default function Home() {
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -26,11 +20,13 @@ export default function Home({
             <section className="home bd-grid" id="home">
                 <div className="home__data">
                     <h1 className="home__title">
-                        {university}
+                        Yıldız Teknik Üniversitesi
                         <br />
-                        <span className="home__title-color">{club}</span>
+                        <span className="home__title-color">
+                            Girişimcilik Kulübü
+                        </span>
                         <br />
-                        {website}
+                        Resmi Web Sitesi
                     </h1>
                     <a
                         href="mailto:talha.arikan@ytugirisim.club"
@@ -41,24 +37,32 @@ export default function Home({
                 </div>
                 <div className="home__social">
                     <a
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.linkedin.com/company/ytugirisim/"
                         className="home__social-icon"
                     >
                         <i className="bx bxl-linkedin" />
                     </a>
                     <a
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.instagram.com/ytugirisim/"
                         className="home__social-icon"
                     >
                         <i className="bx bxl-instagram" />
                     </a>
                     <a
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.youtube.com/c/YT%C3%9CGiri%C5%9FimcilikKul%C3%BCb%C3%BC"
                         className="home__social-icon"
                     >
                         <i className="bx bxl-youtube" />
                     </a>
                     <a
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://twitter.com/ytugirisim"
                         className="home__social-icon"
                     >
@@ -92,8 +96,19 @@ export default function Home({
                 <h2 className="section-title">Hakkımızda</h2>
                 <div className="about__container bd-grid">
                     <div>
-                        <h2 className="about__subtitle">{headerText}</h2>
-                        <p className="about__text">{aboutText}</p>
+                        <h2 className="about__subtitle">
+                            Yıldız Teknik Üniversitesi Girişimcilik Kulübü,
+                        </h2>
+                        <p className="about__text">
+                            öğrencilere girişimcilik etkinlikleri, dersler,
+                            seminerler ve atölyeler sunarak kariyer
+                            planlamalarına ve girişimcilik yolculuklarına destek
+                            olur. Ayrıca mentorluk ve staj imkanları sağlar ve
+                            üyelerini girişimcilik yolculuğuna hazırlar. YTÜ
+                            Girişimcilik Kulübü'nün amacı, üyelerinin
+                            girişimcilik düşünce yapısını geliştirmek ve
+                            girişimcilik ekosistemi oluşturmaktır.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -106,20 +121,6 @@ export default function Home({
             <Members />
             <Departments className="work__container" />
             <ContactForm className="section bd-grid" id="contact" />
-            {/*===== CONTACT =====*/}
         </Layout>
     );
-}
-
-export async function getServerSideProps() {
-    return {
-        props: {
-            aboutText:
-                "öğrencilere girişimcilik etkinlikleri, dersler, seminerler ve atölyeler sunarak kariyer planlamalarına ve girişimcilik yolculuklarına destek olur. Ayrıca mentorluk ve staj imkanları sağlar ve üyelerini girişimcilik yolculuğuna hazırlar. YTÜ Girişimcilik Kulübü'nün amacı, üyelerinin girişimcilik düşünce yapısını geliştirmek ve girişimcilik ekosistemi oluşturmaktır.",
-            headerText: "Yıldız Teknik Üniversitesi Girişimcilik Kulübü,",
-            university: "Yıldız Teknik Üniversitesi",
-            club: "Girişimcilik Kulübü",
-            website: "Resmi Web Sitesi",
-        },
-    };
 }

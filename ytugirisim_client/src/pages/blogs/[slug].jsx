@@ -1,14 +1,14 @@
 import Layout from "@/hoc/Layout";
-import React, { useEffect, useState } from "react";
-import { fetcher } from "lib/api";
 import Markdown from "@/hoc/Markdown";
 import MemberCard from "@/components/MemberCard";
+import { useEffect, useState } from "react";
+import { fetcher } from "lib/api";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const Blog = ({ blog, error }) => {
     const [imgLink, setImgLink] = useState();
-
     const { scrollYProgress } = useScroll();
+
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
@@ -26,9 +26,15 @@ const Blog = ({ blog, error }) => {
         };
         fetchData();
     });
-    let pictureId = blog.author.data.attributes.Profile_Picture.data.id;
-    let theOne = imgLink?.find((obj) => obj.id === pictureId);
-    let picPath = theOne?.attributes.media_field.data.attributes.url;
+
+    // Get the ID of the profile picture for the blog's author
+    const pictureId = blog.author.data.attributes.Profile_Picture.data.id;
+
+    // Find the media object with the same ID as the profile picture (using optional chaining to avoid errors)
+    const mediaObject = imgLink?.find((obj) => obj.id === pictureId);
+
+    // If the media object exists, get the URL property
+    const mediaPath = mediaObject?.attributes.media_field.data.attributes.url;
 
     return (
         <Layout>
@@ -43,7 +49,7 @@ const Blog = ({ blog, error }) => {
                     <MemberCard
                         key={blog.author.data.id}
                         content={blog.author.data.attributes}
-                        picPath={picPath}
+                        mediaPath={mediaPath}
                     />
                 </>
             ) : (

@@ -32,7 +32,7 @@ const Blogs = ({ blogs }) => {
 
 export async function getServerSideProps() {
     const response = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=author`
     );
 
     const data = await response.json();

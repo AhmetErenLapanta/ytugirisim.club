@@ -1,12 +1,12 @@
 import React from "react";
 
-export const MemberCard = ({ content, picPath }) => {
+export const MemberCard = ({ content, mediaPath }) => {
     return (
         <article className="featured__card">
             <span className="featured__tag">{content.Position}</span>
 
             <img
-                src={process.env.NEXT_PUBLIC_BASE_URL + `${picPath}`}
+                src={process.env.NEXT_PUBLIC_BASE_URL + `${mediaPath}`}
                 alt=""
                 className="featured__img"
             />
@@ -20,6 +20,8 @@ export const MemberCard = ({ content, picPath }) => {
 
             <div className="featured__button">
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={
                         content.LinkedIn_Link ??
                         "https://www.linkedin.com/company/ytugirisim/"
@@ -29,6 +31,8 @@ export const MemberCard = ({ content, picPath }) => {
                     <i className="bx bxl-linkedin bx-flashing" />
                 </a>
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={
                         content.Instagram_Link ??
                         "https://www.instagram.com/ytugirisim/"
@@ -38,6 +42,8 @@ export const MemberCard = ({ content, picPath }) => {
                     <i className="bx bxl-instagram bx-flashing" />
                 </a>
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={
                         content.Twitter_Link ?? "https://twitter.com/ytugirisim"
                     }
