@@ -806,7 +806,6 @@ h1 span {
     transform-origin: 0%;
 }
 
-.blog_content,
 .about__text {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
@@ -818,6 +817,21 @@ h1 span {
     margin: 0 auto;
 }
 
+.blog_content {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    color: #333;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box; /* include padding and border in width calculation */
+    max-width: 100%; /* prevent the component from expanding beyond its container */
+    display: flex; /* use flexbox to align child elements */
+    flex-direction: column; /* stack child elements vertically */
+}
+
 .blog_content h2 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -825,6 +839,9 @@ h1 span {
 
 .blog_content p {
     margin-bottom: 20px;
+    max-width: 96%;
+    margin-right: 4%;
+    margin-left: 4%;
 }
 
 .blog_content a {
