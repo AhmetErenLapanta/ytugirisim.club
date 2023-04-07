@@ -24,8 +24,9 @@ const Blog = ({ blog, error }) => {
 
             setImgLink(mediaData.data);
         };
+
         fetchData();
-    });
+    }, []);
 
     // Get the ID of the profile picture for the blog's author
     const pictureId = blog.author.data.attributes.Profile_Picture.data.id;
